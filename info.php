@@ -32,6 +32,6 @@ return array(
 	'version' => '0.0.1',
 	'date' => '2012-03-01',
 	'name' => 'HelloWorld',
-	'desc' => 'A plugin sample that say Hello World when the i-MSCP login page is loaded',
+	'desc' => 'A plugin sample that says Hello World when the i-MSCP login page is loaded',
 	'url' => 'http://i-mscp.net'
 );
