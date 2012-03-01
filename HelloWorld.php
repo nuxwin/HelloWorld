@@ -1,7 +1,7 @@
 <?php
 /**
- * i-MSCP - internet Multi Server Control Panel
- * Copyright (C) 2010 - 2012 by i-MSCP Team
+ * HelloWorld Plugin for i-MSCP - internet Multi Server Control Panel
+ * Copyright (C) 2012 Laurent Declercq <l.declercq@nuxwin.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -10,7 +10,7 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
@@ -20,7 +20,7 @@
  * @category	iMSCP
  * @package		iMSCP_Plugin
  * @subpackage	HelloWorld
- * @copyright	2010 - 2012 by i-MSCP Team
+ * @copyright	2012 by Laurent Declercq
  * @author		Laurent Declercq <l.declercq@nuxwin.com>
  * @link		http://www.i-mscp.net i-MSCP Home Site
  * @license		http://www.gnu.org/licenses/gpl-2.0.html GPL v2
@@ -58,7 +58,7 @@ class iMSCP_Plugin_HelloWorld extends iMSCP_Plugin_Action
 	public function onLoginScriptStart($event)
 	{
 		// Say Hello World on the login page
-		set_page_message('i-MSCP HelloWorld plugin says: Hello World', 'info');
+		//set_page_message('i-MSCP HelloWorld plugin says: Hello World', 'info');
 
 		// Stop the propagation of this event to prevent execution of any other plugin that also listen on it.
 		$event->stopPropagation();
@@ -71,7 +71,9 @@ class iMSCP_Plugin_HelloWorld extends iMSCP_Plugin_Action
 	 */
 	public function onLoginScriptEnd($event)
 	{
-		// Stop the propagation of this event to prevent execution of any other lugin that also listen on it.
+		// Say Hello World on the login page
+		set_page_message('i-MSCP HelloWorld plugin says: Hello World', 'info');
+		// Stop the propagation of this event to prevent execution of any other plugin that also listen on it.
 		$event->stopPropagation();
 	}
 }
